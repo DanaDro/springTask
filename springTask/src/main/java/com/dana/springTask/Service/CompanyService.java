@@ -43,7 +43,7 @@ public class CompanyService {
 		return jobRepository.findByEndDate(endDate);
 	}
 	
-	public List<Job> getJobsByDates(Date endDate, Date startDate){
+	public List<Job> getJobsByDates(Date startDate, Date endDate){
 		return jobRepository.findByEndDateBetween(startDate, endDate);
 	}
 }
