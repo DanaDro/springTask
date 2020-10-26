@@ -28,7 +28,7 @@ public class Employee {
 	private long id;
 	private String name;
 	private double salary;
-	@OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH} , orphanRemoval = true )
+	@OneToMany(cascade = CascadeType.PERSIST , fetch = FetchType.EAGER )
 	private List<Job> jobs = new ArrayList<>();
 	
 	public Employee(String name, double salary) {
