@@ -44,6 +44,6 @@ public class CompanyService {
 	}
 	
 	public List<Job> getJobsByDates(Date endDate, Date startDate){
-		return jobRepository.findByEndDateBetween(endDate, startDate);
+		return jobRepository.findByEndDateBetween(startDate, endDate);
 	}
 }
