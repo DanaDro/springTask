@@ -11,5 +11,5 @@ public interface JobRepository extends JpaRepository<Job, Long>{
 
 	List<Job> findByEndDate(Date endDate);
 	
-	List<Job> findByEndDateBetween(Date endDate, Date startDate);
+	List<Job> findByEndDateBetween(Date startDate, Date endDate);
 }
